@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My Top Down Game", "code\My Top Down Game.csproj", "{F494AAE3-92D4-49E2-B48B-5615355DD37D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SboxNSlash", "code\SboxNSlash.csproj", "{F494AAE3-92D4-49E2-B48B-5615355DD37D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
