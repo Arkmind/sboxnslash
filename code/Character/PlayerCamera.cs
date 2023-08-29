@@ -2,9 +2,9 @@ using Sandbox;
 using System;
 using System.Linq;
 
-namespace MyGame;
+namespace SboxNSlash.Character;
 
-public partial class PawnCamera : EntityComponent<Pawn>, ISingletonComponent
+public partial class PlayerCamera : EntityComponent<BasePawn>, ISingletonComponent
 {
 	protected float WheelSpeed => 30f;
 	protected Vector2 CameraDistance => new( 125, 1000 );

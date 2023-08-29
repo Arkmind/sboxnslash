@@ -2,11 +2,12 @@
 using Sandbox;
 using System;
 using System.Linq;
+using SboxNSlash.Character;
 
 //
 // You don't need to put things in a namespace, but it doesn't hurt.
 //
-namespace MyGame;
+namespace SboxNSlash;
 
 /// <summary>
 /// This is your game class. This is an entity that is created serverside when
@@ -15,12 +16,12 @@ namespace MyGame;
 /// You can use this to create things like HUDs and declare which player class
 /// to use for spawned players.
 /// </summary>
-public partial class MyGame : Sandbox.GameManager
+public partial class SboxNSlash : GameManager
 {
 	/// <summary>
 	/// Called when the game is created (on both the server and client)
 	/// </summary>
-	public MyGame()
+	public SboxNSlash()
 	{
 		if ( Game.IsClient )
 		{
@@ -36,7 +37,7 @@ public partial class MyGame : Sandbox.GameManager
 		base.ClientJoined( client );
 
 		// Create a pawn for this client to play with
-		var pawn = new Pawn();
+		var pawn = new BasePawn();
 		client.Pawn = pawn;
 		pawn.Respawn();
 		pawn.DressFromClient( client );

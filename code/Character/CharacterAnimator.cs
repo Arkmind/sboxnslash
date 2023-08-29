@@ -1,9 +1,9 @@
-﻿using Sandbox;
+using Sandbox;
 using System;
 
-namespace MyGame;
+namespace SboxNSlash.Character;
 
-public class PawnAnimator : EntityComponent<Pawn>, ISingletonComponent
+public class CharacterAnimator : EntityComponent<BasePawn>, ISingletonComponent
 {
 	public void Simulate()
 	{

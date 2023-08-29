@@ -1,13 +1,13 @@
-﻿using Sandbox;
+using Sandbox;
 using System.ComponentModel;
 
-namespace MyGame;
+namespace SboxNSlash.Character;
 
-public partial class Pawn : AnimatedEntity
+public partial class BasePawn : AnimatedEntity
 {
 	[ClientInput]
 	public Vector3 InputDirection { get; set; }
-	
+
 	[ClientInput]
 	public Angles ViewAngles { get; set; }
 
@@ -52,9 +52,9 @@ public partial class Pawn : AnimatedEntity
 		);
 	}
 
-	[BindComponent] public PawnController Controller { get; }
-	[BindComponent] public PawnAnimator Animator { get; }
-	[BindComponent] public PawnCamera Camera { get; }
+	[BindComponent] public CharacterController Controller { get; }
+	[BindComponent] public CharacterAnimator Animator { get; }
+	[BindComponent] public PlayerCamera Camera { get; }
 
 	public override Ray AimRay => new Ray( EyePosition, EyeRotation.Forward );
 
@@ -72,9 +72,9 @@ public partial class Pawn : AnimatedEntity
 
 	public void Respawn()
 	{
-		Components.Create<PawnController>();
-		Components.Create<PawnAnimator>();
-		Components.Create<PawnCamera>();
+		Components.Create<CharacterController>();
+		Components.Create<CharacterAnimator>();
+		Components.Create<PlayerCamera>();
 	}
 
 	public void DressFromClient( IClient cl )
